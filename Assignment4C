@@ -1,0 +1,17 @@
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+    Console.WriteLine ("[Backspace Animation]");
+    Console.WriteLine ("Please enter your sentence:");
+    string sentence = Console.ReadLine();
+    Console.WriteLine ("How many letters do you want to backspace?");
+    int letters_b = Convert.ToInt32(Console.ReadLine());
+    for (int i= 0; i < letters_b; i++)
+    {
+      sentence = sentence + "\b \b";
+      Console.WriteLine(sentence);
+      System.Threading.Thread.Sleep(500);
+    }
+    }
+}
