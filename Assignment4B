@@ -1,0 +1,69 @@
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+    bool setting = true;
+    int x = 1;
+    int i= 0, c= 0 , p= 0, g = 0;
+    string input;
+    while (setting)
+    {
+      Console.WriteLine("Student #"+x+": Which country should we go to for our next study");
+      Console.WriteLine("abroad program?");
+      Console.WriteLine("Italy");
+      Console.WriteLine("Costa Rica");
+      Console.WriteLine("Pax Bisonica");
+      Console.WriteLine("Ghana");
+      Console.WriteLine("(Type Quit to end the survey)");
+      x++;
+      input = Console.ReadLine();
+      if (input == "Italy") 
+      {
+        i+=1;
+        continue;
+      }
+      if (input == "Costa Rica")
+      {
+        c+= 1;
+        continue;
+      }
+      if (input == "Pax Bisonica")
+      {
+        p+= 1;
+        continue;
+      }  
+      if (input == "Ghana")
+      {
+        g+= 1;
+        continue;
+      }
+      if (input == "Quit")
+      {
+        setting = false;
+      }                           
+    }
+    Console.WriteLine("[Results]");
+    Console.WriteLine("Italy: "+i);
+    Console.WriteLine("Costa Rica: "+c);
+    Console.WriteLine("Pax Bisonica: "+p);
+    Console.WriteLine("Ghana: "+ g);
+
+    if (i > c && i > p && i > g)
+    {
+      Console.WriteLine("Next year’s study abroad program will take place in Italy.");
+    }
+     if (g > c && g > p && g > i)
+    {
+      Console.WriteLine("Next year’s study abroad program will take place in Ghana.");
+    }
+     if (p > c && p > i && p > g)
+    {
+      Console.WriteLine("Next year’s study abroad program will take place in Pax Bisonica.");
+    }
+     if (c > i && c > p && c > g)
+    {
+      Console.WriteLine("Next year’s study abroad program will take place in Costa Rica.");
+    }
+      
+  }
+}
